@@ -1,0 +1,383 @@
+* {
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav {
+  position: relative;
+  height: 4rem;
+  background-color: rgba(0, 0, 0, 1);
+  display: block;
+  z-index: 5;
+}
+
+.nav .logo {
+  float: left;
+  width: 350px;
+  padding-left: 30px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.nav .navigator {
+  list-style: none;
+  float: right;
+  display: flex;
+  align-items: center;
+  margin: auto 1px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.hidden a {
+  text-decoration: none;
+  font-weight: lighter;
+  position: relative;
+}
+
+.hidden a::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.7s ease-in-out;
+}
+
+.hidden a:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.nav .navigator .hidden a {
+  margin-right: 30px;
+  color: aliceblue;
+  font-size: 1.1em;
+  font-weight: lighter;
+}
+
+.hamburger {
+  visibility: hidden;
+}
+
+.dropdown {
+  display: none;
+  width: 150px;
+  z-index: 6;
+  position: absolute;
+  right: 1%;
+  top: 90%;
+}
+
+.hamburger {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.hamburger:hover .dropdown {
+  display: block;
+}
+
+.hamburger:focus .dropdown {
+  display: block;
+}
+.hamburger:active .dropdown {
+  display: block;
+}
+
+.dropdown ul {
+  background-color: rgba(0, 0, 0, 0.9);
+  float: none;
+  display: block;
+  list-style-type: none;
+  padding: 0%;
+}
+
+.dropdown ul li {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.fa-bars {
+  color: white;
+  padding: 20px;
+}
+
+.dropdown ul li a {
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  padding-left: 10px;
+  font-weight: lighter;
+  color: white;
+  text-align: left;
+}
+
+.dropdown ul li:hover {
+  background-color: white;
+  color: white;
+}
+
+.dropdown ul li:hover a {
+  color: black;
+}
+
+.about {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 40px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.ceoabout {
+  padding-left: 15px;
+  width: 60%;
+  text-align: justify;
+}
+
+.ceoabout h1 {
+  text-align: center;
+  margin-left: auto;
+  padding: 15px 15px 15px 15px;
+  border-bottom: 1px solid black;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.ceoabout p {
+  padding-top: 32px;
+  text-indent: 50px;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.ceoimg {
+  width: 300px;
+  height: auto !important;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ceoimg img {
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  height: 300px;
+  background: rgba(0, 0, 0, 1);
+  text-align: center;
+  position: relative;
+}
+
+.footer-content {
+  align-items: center;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.footer-content h1 {
+  font-weight: lighter;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  padding-top: 40px;
+}
+
+.footer-content ul {
+  list-style-type: none;
+  width: 200px;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-content ul a {
+  float: left;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  font-weight: lighter;
+}
+
+.social-media a:hover {
+  color: rgb(158, 74, 44);
+}
+
+.devices {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.gadget {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+}
+
+.gadget h4 {
+  font-weight: lighter;
+  padding: 15px;
+}
+
+.snippet-container {
+  width: 100%;
+}
+
+.snippet img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .ceoabout,
+  .ceoimg {
+    width: 100%;
+  }
+  .ceoimg {
+    margin-top: 20px;
+  }
+  .ceoabout {
+    padding: 0%;
+  }
+  .about {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .nav {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .ceoabout {
+    padding: 0%;
+  }
+
+  .nav .logo {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+  }
+  .nav .navigator {
+    right: 0;
+  }
+
+  .navigator a {
+    padding-right: 0px;
+  }
+
+  .nav ul .hidden {
+    display: none;
+  }
+  .hamburger {
+    visibility: visible;
+    padding: 5px;
+  }
+
+  .dronecolumn {
+    width: 50%;
+  }
+  .droneheader {
+    width: 60%;
+  }
+  .aestheticheader {
+    width: 60%;
+  }
+  .droneclips {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .devices {
+    flex-direction: column;
+    padding: 0%;
+  }
+  .w-1,
+  .w-2,
+  .w-3 {
+    grid-column: span 1;
+  }
+  .h-1,
+  .h-2,
+  .h-3 {
+    grid-row: span 1;
+  }
+  .ceoabout {
+    padding: 0%;
+  }
+  .aestheticcontainer,
+  .portrait-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .droneheader {
+    width: 80%;
+    font-size: 38px;
+  }
+  .aestheticheader,
+  .portraitheader {
+    width: 80%;
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about {
+    width: 99%;
+    box-shadow: none;
+    padding: 10px;
+  }
+  .ceoabout {
+    padding: 0%;
+  }
+  .dronecolumn {
+    width: 100%;
+  }
+  .droneclips {
+    width: 100%;
+  }
+  .w-1,
+  .w-2,
+  .w-3 {
+    grid-column: span 1;
+  }
+  .h-1,
+  .h-2,
+  .h-3 {
+    grid-row: span 1;
+  }
+  .aestheticcontainer {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+  .portrait-container {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+}
